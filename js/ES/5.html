@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        // 一.构造函数的继承
+        // (1)构造函数绑定
+        function Animal(){
+            this.species = "动物";
+        }
+        function Cat(name,color){
+            Animal.apply(this,arguments);
+            this.name = name;
+            this.color = color;
+        }
+        var cat = new Cat('carry','red');
+        console.log(cat.species);
+        // (2) prototype模式
+        function Animal1(){
+            this.species = "动物";
+        }
+        function Cat1(name,color){
+            this.name = name;
+            this.color = color;
+        }
+        Cat1.prototype = new Animal();
+        Cat1.prototype.constructor = Cat1;
+        var cat1 = new Cat1('carry','red');
+        console.log(cat1.species);
+        // (3) 直接继承prototype
+        function Animal2(){ }
+　　    Animal2.prototype.species = "动物";
+        function Cat2(name,color){
+            this.name = name;
+            this.color = color;
+        }
+        Cat2.prototype = Animal.prototype;
+　　    Cat2.prototype.constructor = Cat;
+    　　var cat2 = new Cat("大毛","黄色");
+    　　console.log(cat2.species); // 动物
+        // 与前一种方法相比，这样做的优点是效率比较高（不用执行和建立Animal的实例了），比较省内存。
+        // 缺点是 Cat.prototype和Animal.prototype现在指向了同一个对象，那么任何对Cat.prototype的修改，都会反映到Animal.prototype。
+        // (4)利用空对象作为中介
+        function Animal3(){}
+        Animal3.prototype.species = "动物";
+        function Cat3(name,color){
+            this.name = name;
+            this.color = color;
+        }
+        function F(){}
+        F.prototype = Animal3.prototype;
+        Cat3.prototype = new F();
+        Cat.prototype.constructor = Cat;
+        var cat3 = new Cat3("大毛","黄色");
+        console.log(cat3.species);
+        // F是空对象，所以几乎不占内存。这时，修改Cat的prototype对象，就不会影响到Animal的prototype对象。
+    </script>
+</body>
+</html>
