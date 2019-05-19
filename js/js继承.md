@@ -1,5 +1,5 @@
 ####  js继承的实现方式？
-```
+```javascript
 // 定义一个动物类
 function Animal(name) {
     // 属性
@@ -16,7 +16,7 @@ Animal.prototype.eat = function(food) {
 ```
 ##### 1.原型链继承
     核心：将父类的实例作为子类的原型
-```
+```javascript
 function Cat() {}
 Cat.prototype = new Animal();
 var cat = new Cat();
@@ -33,7 +33,7 @@ console.log(cat.name);
 ```
 ##### 2.构造继承
     核心：使用父类的构造函数来增强子类实例，等于是复制父类的实例属性给子类（没用到原型）
-```
+```javascript
 function Dog(color){
     Animal.call(this,'狗');
     this.color = color;
@@ -52,7 +52,7 @@ dog.sleep();
 ```
 ##### 3.组合继承
     核心：通过调用父类构造，继承父类的属性并保留传参的优点，然后通过将父类实例作为子类原型，实现函数复用
-```
+```javascript
 function Tiger(){
     Animal.call(this);
 }
@@ -73,7 +73,7 @@ tiger.eat('shi');
 ```
 ##### 4.寄生组合继承
     核心：通过寄生方式，砍掉父类的实例属性，这样，在调用两次父类的构造的时候，就不会初始化两次实例方法/属性，避免的组合继承的缺点
-```
+```javascript
 function Rabbit(name){
     Animal.call(this);
     this.name = name || 'tom';

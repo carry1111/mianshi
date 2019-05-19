@@ -2,7 +2,7 @@
     考察点1：对于基本数据类型和引用数据类型在内存中存放的是值还是指针这一区别是否清楚
     考察点2：是否知道如何判断一个变量是什么类型的
     考察点3：递归算法的设计
-```
+```javascript
 function clone(obj){
     if(obj instanceof Array || obj instanceof Object){
         var a = obj.constructor === Array ? [] : {};
