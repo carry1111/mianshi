@@ -19,3 +19,26 @@
         　要实现ajax下的前后退功能成本较大
         　可能造成请求数的增加
         　跨域问题限制
+#### 3、创建ajax过程
+- 创建XMLHttpRequest对象,也就是创建一个异步调用对象.
+- 创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息.
+- 设置响应HTTP请求状态变化的函数.
+- 发送HTTP请求.
+- 获取异步调用返回的数据.
+- 使用JavaScript和DOM实现局部刷新.
+#### 4、手写Ajax
+```javascript
+var xhr;
+if(window.XMLHttpRequest){
+    xhr = new XMLHttpRequest();
+}else{
+    xhr = new ActiveObject('Microsoft.XMLHTTP');
+}
+xhr.open('GET','api',true);
+xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 2000){
+        alert(responseText);
+    }
+}
+xhr.send();
+```
