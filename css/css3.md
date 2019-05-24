@@ -3,6 +3,6 @@
 
 box-sizing属性可以为三个值之一：
 
-content-box，默认值，border和padding不计算入width之内
-padding-box，padding计算入width内
-border-box，border和padding计算入width之内
+    content-box，默认值，border和padding不计算入width之内
+    padding-box，padding计算入width内
+    border-box，border和padding计算入width之内
