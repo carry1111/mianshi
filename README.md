@@ -5,7 +5,7 @@
     + [创建ajax过程](https://github.com/carry1111/mianshi#创建ajax过程)
     + [闭包](https://github.com/carry1111/mianshi#闭包)
 + 正则表达式
-    + [给string添加一个trim()方法，去掉开头和结尾的空格符号](https://github.com/carry1111/mianshi#给string添加一个trim()方法，去掉开头和结尾的空格符号)
+    + [给string添加一个trim()方法，去掉开头和结尾的空格符号](https://github.com/carry1111/mianshi#给string添加一个trim方法，去掉开头和结尾的空格符号)
 + 编程题
     + [如何判断一个对象是否为数组](https://github.com/carry1111/mianshi#如何判断一个对象是否为数组)
 ### js
