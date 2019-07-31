@@ -1,7 +1,7 @@
 # web前端面试题
 + js
     + [最简单的数组去重方式](https://github.com/carry1111/mianshi#%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%E6%96%B9%E5%BC%8F) 
-    + [数组排序](https://github.com/carry1111/mianshi#数组排序)
+    + [数组排序(从小到大)](https://github.com/carry1111/mianshi#数组排序(从小到大))
     + [创建ajax过程](https://github.com/carry1111/mianshi#创建ajax过程)
     + [闭包](https://github.com/carry1111/mianshi#闭包)
 + 正则表达式
