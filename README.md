@@ -8,6 +8,7 @@
     + [给string添加一个trim()方法，去掉开头和结尾的空格符号](https://github.com/carry1111/mianshi#给string添加一个trim()方法，去掉开头和结尾的空格符号)
 + 编程题
     + [如何判断一个对象是否为数组](https://github.com/carry1111/mianshi#如何判断一个对象是否为数组)
+### js
 #### 最简单的数组去重方式
     [...new Set(array)]
 #### 数组排序(从小到大)
@@ -38,12 +39,14 @@ function incSort(arr){
     闭包是指有权访问另一个函数作用域中的变量的函数。
     创建闭包的常见方式，就是在一个函数内部创建另一个函数。
     闭包会导致原有作用域链不释放，造成内存泄漏
+### 正则表达式
 #### 给string添加一个trim()方法，去掉开头和结尾的空格符号
 ```javascript
 String.prototype.trim = function(str){
     return this.replace(/(^\s*)|(\s*$)/g,'');
 }
 ```
+### 编程题
 #### 如何判断一个对象是否为数组
 ```javascript
 function isArray(arg){
