@@ -4,13 +4,13 @@
     + [数组排序(从小到大)](https://github.com/carry1111/mianshi#%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F%E4%BB%8E%E5%B0%8F%E5%88%B0%E5%A4%A7)
     + [创建ajax过程](https://github.com/carry1111/mianshi#%E5%88%9B%E5%BB%BAajax%E8%BF%87%E7%A8%8B)
     + [闭包](https://github.com/carry1111/mianshi#%E9%97%AD%E5%8C%85)
-    + [原型、原型链]()
-    + [判断[] == ![]]()
+    + [原型、原型链](https://github.com/carry1111/mianshi#%E5%8E%9F%E5%9E%8B%E5%8E%9F%E5%9E%8B%E9%93%BE)
+    + [判断[] == ![]](https://github.com/carry1111/mianshi#%E5%88%A4%E6%96%AD--)
 + js进阶
-    + [new]()
-    + [instanceof 的原理]()
+    + [new](https://github.com/carry1111/mianshi#new)
+    + [instanceof 的原理](https://github.com/carry1111/mianshi#instanceof-%E7%9A%84%E5%8E%9F%E7%90%86)
 + es6
-    + [var、let 及 const 区别？]()
+    + [var、let 及 const 区别？](https://github.com/carry1111/mianshi#varlet-%E5%8F%8A-const-%E5%8C%BA%E5%88%AB)
 + 正则表达式
     + [给string添加一个trim方法，去掉开头和结尾的空格符号](https://github.com/carry1111/mianshi#%E7%BB%99string%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AAtrim%E6%96%B9%E6%B3%95%E5%8E%BB%E6%8E%89%E5%BC%80%E5%A4%B4%E5%92%8C%E7%BB%93%E5%B0%BE%E7%9A%84%E7%A9%BA%E6%A0%BC%E7%AC%A6%E5%8F%B7)
 + 编程题
