@@ -1,10 +1,16 @@
 ## web前端面试题
-+ js
++ js基础
     + [最简单的数组去重方式](https://github.com/carry1111/mianshi#%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%E6%96%B9%E5%BC%8F) 
     + [数组排序(从小到大)](https://github.com/carry1111/mianshi#%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F%E4%BB%8E%E5%B0%8F%E5%88%B0%E5%A4%A7)
     + [创建ajax过程](https://github.com/carry1111/mianshi#%E5%88%9B%E5%BB%BAajax%E8%BF%87%E7%A8%8B)
     + [闭包](https://github.com/carry1111/mianshi#%E9%97%AD%E5%8C%85)
+    + [原型、原型链]()
+    + [判断[] == ![]]()
++ js进阶
+    + [new]()
+    + [instanceof 的原理]()
 + es6
+    + [var、let 及 const 区别？]()
 + 正则表达式
     + [给string添加一个trim方法，去掉开头和结尾的空格符号](https://github.com/carry1111/mianshi#%E7%BB%99string%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AAtrim%E6%96%B9%E6%B3%95%E5%8E%BB%E6%8E%89%E5%BC%80%E5%A4%B4%E5%92%8C%E7%BB%93%E5%B0%BE%E7%9A%84%E7%A9%BA%E6%A0%BC%E7%AC%A6%E5%8F%B7)
 + 编程题
@@ -47,12 +53,44 @@ function incSort(arr){
     原型：我们创建的构造函数都有一个prototype属性，指向原型对象，原型对象的用途是包含这个构造函数的所有实例共享的属性和方法。
     原型链：对象的  __proto__  属性指向原型，  __proto__  将对象和原型连接起来组成了原型链
 ####  判断[] == ![] 
-    [] == ![]  =>  [] == false  =>  [] == 0  =>  '' == 0  =>  0 == 0  =>  true
+    [] == ![]  =>  
+    [] == false  =>  
+    [] == 0  =>  
+    '' == 0  =>  
+    0 == 0  =>  
+    true
+
+### js进阶
+
+#### new
+    在调用  new  的过程中会发生以上四件事情：
+    1. 新生成了一个对象 
+    2. 链接到原型 
+    3. 绑定 this 
+    4. 返回新对象
+#### instanceof 的原理
+instanceof  可以正确的判断对象的类型，因为内部机制是通过判断对象的原型链中是不是能找到类型的 prototype 。
+```javascript
+function myInstanceof(left,right) {
+    let prototype = right.prototype;
+    left = left.__proto__;
+    while(true){
+        if(left === null || left === undefined){
+            return false;
+        }
+        if(left === prototype){
+            return true;
+        }
+        left = left.__proto__;
+    }
+}
+```
 
 ### es6
 
 #### var、let 及 const 区别？
-    首先在全局作用域下使用  let  和  const  声明变量，变量并不会被挂载到  window  上，这一点就和  var  声明有了 区别。
+首先在全局作用域下使用  let  和  const  声明变量，变量并不会被挂载到  window  上，这一点就和  var  声明有了 区别。
+使用  var  声明的变量会被提升到作用域的顶部，let 和 const 则不会。
     
 ### 正则表达式
 
